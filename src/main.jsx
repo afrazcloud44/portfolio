@@ -171,7 +171,7 @@ function App() {
           <Reveal className="portrait">
             <div className="photo-shell">
               <div className="scan-line" />
-              <div className="photo"><img src="/profile.png" alt="Mohammed Afras M" /><div className="photo-badge"><i /> DevOps Engineer</div></div>
+              <div className="photo"><img src={`${import.meta.env.BASE_URL}profile.png`} alt="Mohammed Afras M" /><div className="photo-badge"><i /> DevOps Engineer</div></div>
             </div>
           </Reveal>
 
