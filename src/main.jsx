@@ -24,14 +24,14 @@ const metrics = [
 ];
 
 const tools = [
-  ['AWS', 'amazon cloud', '/tools/aws.png'],
-  ['Kubernetes', 'container orchestration', '/tools/kubernetes.png'],
-  ['Docker', 'containers', '/tools/docker.png'],
-  ['Jenkins', 'ci/cd automation', '/tools/jenkins.png'],
-  ['Terraform', 'infrastructure as code', '/tools/terraform.png'],
-  ['ArgoCD', 'gitops delivery', '/tools/argocd.png'],
-  ['Prometheus', 'metrics monitoring', '/tools/prometheus.png'],
-  ['Grafana', 'observability', '/tools/grafana.png']
+  ['AWS', 'amazon cloud', 'tools/aws.png'],
+  ['Kubernetes', 'container orchestration', 'tools/kubernetes.png'],
+  ['Docker', 'containers', 'tools/docker.png'],
+  ['Jenkins', 'ci/cd automation', 'tools/jenkins.png'],
+  ['Terraform', 'infrastructure as code', 'tools/terraform.png'],
+  ['ArgoCD', 'gitops delivery', 'tools/argocd.png'],
+  ['Prometheus', 'metrics monitoring', 'tools/prometheus.png'],
+  ['Grafana', 'observability', 'tools/grafana.png']
 ];
 
 const skills = {
@@ -187,7 +187,7 @@ function App() {
             <div className="tools-intro"><span className="pulse-dot" /> TECHNOLOGIES<br /><b>I WORK WITH</b></div>
             <div className="tool-list">
               {tools.map(([name, sub, img], i) => <motion.div className="tool-card" key={name} whileHover={{ y: -7, scale: 1.025 }} transition={{ type: 'spring', stiffness: 300, damping: 20 }}>
-                <div className="tool-image"><img src={img} alt={name} /></div><b>{name}</b><small>{sub}</small><span className="tool-glow" />
+                <div className="tool-image"><img src={`${import.meta.env.BASE_URL}${img}`} alt={name} /></div><b>{name}</b><small>{sub}</small><span className="tool-glow" />
               </motion.div>)}
             </div>
             <div className="more-tools">AND<br /><span>MORE →</span></div>
