@@ -149,7 +149,7 @@ function App() {
           <a href={profile.github} target="_blank" rel="noreferrer"><Github size={16} /></a>
           <a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={16} /></a>
           <a href={`mailto:${profile.email}`}><Mail size={16} /></a>
-          <a className="resume" href="/afraz-cv.pdf" download><Download size={15} /> Download Resume</a>
+          <a className="resume" href={`${import.meta.env.BASE_URL}afraz-cv.pdf`} download><Download size={15} /> Download Resume</a>
         </div>
         <button className="hamb" onClick={() => setMenu(!menu)}>{menu ? <X /> : <Menu />}</button>
       </header>
@@ -163,7 +163,7 @@ function App() {
             <p className="hero-description">DevOps Engineer focused on scalable cloud infrastructure, Kubernetes platforms, CI/CD automation and reliable application delivery.</p>
             <div className="actions">
               <button className="primary" onClick={() => go('projects')}>View My Work <ArrowUpRight /></button>
-              <a className="secondary" href="/afraz-cv.pdf" download><Download /> Download Resume</a>
+              <a className="secondary" href={`${import.meta.env.BASE_URL}afraz-cv.pdf`} download><Download /> Download Resume</a>
             </div>
             <div className="social"><a href={profile.github} target="_blank" rel="noreferrer"><Github /> GitHub</a><a href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin /> LinkedIn</a><a href={`mailto:${profile.email}`}><Mail /> Email</a></div>
           </div>
@@ -171,7 +171,7 @@ function App() {
           <Reveal className="portrait">
             <div className="photo-shell">
               <div className="scan-line" />
-              <div className="photo"><img src={`${import.meta.env.BASE_URL}profile.png`} alt="Mohammed Afras M" /><div className="photo-badge"><i /> DevOps Engineer</div></div>
+              <div className="photo"><img src={`${import.meta.env.BASE_URL}Screenshot From 2026-10-13 12-48-09.png`} alt="Mohammed Afras M" /><div className="photo-badge"><i /> DevOps Engineer</div></div>
             </div>
           </Reveal>
 
@@ -190,7 +190,7 @@ function App() {
                 <div className="tool-image"><img src={`${import.meta.env.BASE_URL}${img}`} alt={name} /></div><b>{name}</b><small>{sub}</small><span className="tool-glow" />
               </motion.div>)}
             </div>
-            <div className="more-tools">AND<br /><span>MORE →</span></div>
+            <div className="more-tools">AND<br /><span>MORE →</span></div> ##3
           </Reveal>
 
           <div className="scroll-cue"><div className="mouse"><span /></div><small>SCROLL TO EXPLORE</small></div>
